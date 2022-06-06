@@ -1,4 +1,4 @@
-# Default values for redwineserver.
+# Default values for agredwineserver.
 # This is a YAML-formatted file.
 # Declare variables to be passed into your templates.
 
@@ -7,7 +7,7 @@ replicaCount: 1
 containerPort: 5000
 
 imageKey:
-  repository: redwineserver
+  repository: agredwineserver
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: "latest"

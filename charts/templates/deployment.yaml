@@ -1,16 +1,16 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "redwineserver.fullname" . }}
+  name: {{ include "agredwineserver.fullname" . }}
   labels:
-    {{- include "redwineserver.labels" . | nindent 4 }}
+    {{- include "agredwineserver.labels" . | nindent 4 }}
 spec:
   {{- if not .Values.autoscaling.enabled }}
   replicas: {{ .Values.replicaCount }}
   {{- end }}
   selector:
     matchLabels:
-      {{- include "redwineserver.selectorLabels" . | nindent 6 }}
+      {{- include "agredwineserver.selectorLabels" . | nindent 6 }}
   template:
     metadata:
       {{- with .Values.podAnnotations }}
@@ -18,7 +18,7 @@ spec:
         {{- toYaml . | nindent 8 }}
       {{- end }}
       labels:
-        {{- include "redwineserver.selectorLabels" . | nindent 8 }}
+        {{- include "agredwineserver.selectorLabels" . | nindent 8 }}
     spec:
       {{- with .Values.imagePullSecrets }}
       imagePullSecrets:

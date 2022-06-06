@@ -1,8 +1,8 @@
 imageKey:
-    repository: aksdraftredwine.azurecr.io/aksdraftredwine
-    pullPolicy: IfNotPresent
-    tag: latest
+  repository: "agredwineserver"
+  pullPolicy: IfNotPresent
+  tag: "latest"
 service:
-    annotations: {}
-    type: LoadBalancer
-    port: "80"
+  annotations: {}
+  type: LoadBalancer
+  port: 80
